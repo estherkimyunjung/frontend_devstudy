@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML5 Basic</title>
+</head>
+<body>
+
+	<h2>Test02 - HTML5의 새로운 form 양식</h2>
+	
+	<br><hr><br>
+	1. 제시된 화면에 맞게 각 기능별 tag를 완성하세요<br>
+	<a href="https://www.w3schools.com/tags/default.asp">2. HTML Tags 참고 사이트</a><br>
+	3. 정규표현식[Regular Expressions, 정규식] - 특정한 규칙을 가진 문자열의 집합 표현<br>
+	&nbsp;&nbsp;<a href="http://www.nextree.co.kr/p4327/" target="_blank">3-1. 개념 이해하기</a><br>
+	&nbsp;&nbsp;<a href="https://regex101.com/" target="_blank">3-2. 정규식 test해 보기</a><br>
+	
+	<br><hr><br>
+
+    <form action="#">
+
+	 	<fieldset>
+
+			<legend>HTML5의 새로운 form 양식 Test</legend>
+
+			1. color 선택 가능 :  <input type="color" name="color" value="#0000ff"><br><br>
+			
+			2. date 선택 가능: <input type="date" name="date"><br><br>     
+
+			3. 시간 포함 date 선택 가능 :  <input type="datetime-local" name="date_time"><br><br>
+
+			4. 시간 형식 표현 : <input type="time" name="time"><br><br>
+
+			5. 해당 주수 표현 : <input type="week" name="week_year"><br><br>
+
+			6. 년 월 선택 가능 : <input type="month" name="month_year" /><br><br>
+
+			7. email 양식 유효성 검증 :  <input type="email" name="email"><br><br>
+
+			8. 숫자 이외 입력 불가 :  <input type="number" name="numbers"><br><br>
+
+			9. 특정 범위값 표현 및 입력시 사용 : <input type="range" name="points" min="0" max="10"><br><br>     
+			
+			10. url 양식 표현 : <input type="url" name="homepage"><br><br>
+
+			11. 즐겨찾기 선택: datalist tag를 사용하여 input "autocomplete" 기능 제공해서 만들기<br>
+			<input type="url" list="urls" placeholder="검색사이트">
+			<datalist id="urls">
+				
+				<option value="https://www.w3schools.com/tags/default.asp">
+				<option value="http://www.nextree.co.kr/p4327/">
+				<option value="https://regex101.com/">
+				</datalist>	
+			<br><br>
+			
+			12. 전화번호:  <input type="tel" name="phone" pattern="[\010-]\d{3}[\-]\d{4}" placeholder="입력예: 010-000-0000"><br>
+			
+			<br><br>
+			<input type="submit" value="확인" />
+			<input type="reset" value="취소" />
+
+		</fieldset>
+
+	</form>
+	
+</body>
+</html>

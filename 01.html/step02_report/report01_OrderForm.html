@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HTML5 Web Form</title>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
+</head>
+
+<body>
+
+<form id="orderForm" action="" method="get">
+
+  <h1>Report01 - Software Order Form</h1>
+
+  <fieldset>
+    <legend>License details</legend>
+
+    <ul>
+      <li>
+        <label for="emailAddress">Email address</label>
+        <!-- 제약 조건
+          1. email 입력 text field에는 autofocus 기능 적용
+          2. 철자의 최대 개수 : 50
+          3. client는 반드시 입력해야만 함
+        -->
+		?     <input type="email" name="emailAddress" id="emailAddress" placeholder="name@example.com" autofocus maxlength="50" required>
+
+
+      </li>
+
+      <li>
+        <label for="website">Website</label>
+        <input type="url" name="website" id="website" placeholder="http://www.example.com/" required maxlength="100" />
+      </li>
+
+      <li>
+        <label for="numLicenses">Number of licenses</label>
+        <!-- 제약 조건
+          1. 입력값은 범위 : 1~10
+          2. client는 반드시 입력해야만 함
+        -->
+       
+	   ?    <input type="number" name="numLicenses" id="numLicenses" min="1" max="10" required placeholder="1~10">
+
+      </li>      
+    </ul>
+
+  </fieldset>
+
+
+  <fieldset>
+    <legend>Billing details</legend>
+
+    <ul>
+      <li>
+        <label for="billingName">Name</label>
+        <input type="text" name="billingName" id="billingName" placeholder="First Last" required maxlength="50" />
+      </li>
+
+      <li>
+        <label for="billingAddress">Address</label>
+        <!-- 제약 조건 
+        1. 여러 라인이 입력 가능한 form으로 개발 하기
+        2. 입력되는 철자의 최대 개수 : 150
+        -->
+        
+		?     <br><textarea name="billingAddress" id="billingAddress"  placeholder="House number, street, city, state" maxlength="150"></textarea>
+
+      </li>
+
+      <li>
+        <label for="billingPostcode">Postal code</label>
+        <input type="text" name="billingPostcode" id="billingPostcode" placeholder="Post code or zip code" required maxlength="20" />
+      </li>
+
+      <li>
+        <label for="billingCountry">Country</label>
+        <!-- 제약 조건
+        1. 선택 tag로 개발
+        2. 데이터들은 Canada, Korea, New Zealand, United Kingdom 순으로 출력되게 함
+        3. 단 초기 화면에 Korea가 보이게 해야 함
+        -->
+        
+		?     <select name="billingCountry" id="billingCountry">
+            <option value="Canada">Canada</option>
+            <option value="Korea" selected>Korea</option>
+            <option value="New Zealand">New Zealand</option>
+            <option value="United Kingdom">United Kingdom</option>
+          </select>
+
+      </li>
+
+      <li>
+        <label for="phone">Phone <em>(optional)</em></label>
+        <input type="tel" name="phone" id="phone" placeholder="Include country prefix, e.g. +44" maxlength="20" />
+      </li>
+    </ul>
+
+  </fieldset>
+
+
+  <fieldset>
+    <legend>Payment details</legend>
+
+    <ul>
+      <li>
+        <label for="cardNumber">Card number</label>
+         <!-- 
+          제약 조건
+          1. pattern 속성을 사용하여 숫자에 한해서 12자릿수 이상의 규칙 적용하기
+          2. 카드 번호 숫자의 최대 길이 : 20
+        -->
+        
+		?     <input type="text" name="Card number" pattern="\d{12,20}" title="twelve or more digits" maxlength="20" placeholder="As shown on the front of your card number">
+          <!-- (?=.*\d) -->
+      </li>
+
+      <li>
+        <label for="cvvCode">CSV code</label>
+        <!-- 
+          제약 조건
+          1. pattern 속성을 사용하여 숫자 3자리만이 유효한 표현으로 설정하기
+        -->
+        ?     <input type="text" name="cvvCode" pattern="[0-9]{3}" title="three digits" size="5" placeholder="3-digit number on the back of card">
+
+      </li>
+
+      <li>
+        <label for="expiryDate">Expiry date</label>
+        <!-- 
+          제약 조건
+          1. 년월 기준으로 표현될 수 있게 하려면 type 속성값은?
+        -->
+        <input type= month  name="expiryDate" id="expiryDate" title="YYYY-MM" required maxlength="7" />
+      </li>
+    </ul>
+
+  </fieldset>
+  <br><br>
+  <input type="submit" value="order"  />
+  <input type="reset" value="cancle" />
+   
+</form>
+
+</body>
+</html>
+
+

@@ -1,0 +1,111 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+
+<title>HTML form Tags</title>
+</head>
+
+<body>
+
+	<b><h2>Test01 - HTML forms Tags 종류 이해 및 구현해 보기</h2></b>
+
+	<form>
+
+		<br><br>
+		<b>1. single line의 단일행 문자를 입력 받을수 있는 Textfield component</b>
+		<br>
+		<input type="text" name="name" value="I am a Text">
+
+
+		<br><br>
+
+		<b>2. 비밀 번호 입력 양식으로 입력되는 데이터를 다른 표기로 변환되게 하는 Password component</b>
+		<br>
+		<input type="password" name="password" value="12345">
+
+
+		<br><br>
+		<b>3. 보이지는 않지만 Server단에 전송하게 되는 Hidden field component</b>
+		<br>
+	    <input type="hidden" name="id" id="id" value="server" >
+
+
+		<br><br>
+		<b>4. 여러개 선택 가능한 Checkbox component</b>
+		<br>
+		<input type="checkbox" name="fruit" value="apples" checked>I like apples<br>
+		<input type="checkbox" name="fruit" value="oranges">I like oranges<br>
+		<input type="checkbox" name="fruit" value="bananas">I like bananas<br>
+
+
+
+		<br><br>
+		<b>5. 하나만 선택 가능한 Radio button component</b>
+		<br>
+		<input type="radio" name="gender" value="Female" checked>Female<br>
+		<input type="radio" name="gender" value="Male">Male<br>
+		
+
+
+
+		<br><br>
+		<b>6. 여러 list중에서 하나만 선택 가능한 drop-down list component : select</b>
+		<br>
+		<select>
+			<option value="Pink Floyd" selected>Pink Floyd</option>
+			<option value="Pink Floyd 1">Pink Floyd 1</option>
+			<option value="Pink Floyd 2">Pink Floyd 2</option>
+		</select>
+
+		
+		<br><br>
+		<b>7. 여러 list중에서 다중 선택 가능, 모든 항목을 다 show 해주는 drop-down list component : select</b>
+		<br>
+		<select multiple>
+			<option value="soccer" selected>soccer</option>
+			<option value="tennis">Tennis</option>
+			<option value="Ultimate Frisbee"selected>Ultimate Frisbee</option>
+		</select>
+
+	
+
+		<br><br>
+		<b>8. 여러개의 목록에서 몇가지를 선택할수 있게 하는 태그로 optgroup tag는 옵션을 그룹화함<br>
+		<select>
+			<optgroup label="HTML5">
+				<option>Multimedia Tag</option>
+				<option>Connectivity</option>
+				<option>Device Access</option>
+			</optgroup>
+			
+			<optgroup label="CSS3">
+				<option>Animation</option>
+				<option>3D Transform</option>
+			</optgroup>
+		</select>
+
+
+		<br><br>
+		<b>9. 전송(Submit) button component</b>
+		<br>
+		<input type='submit' value='Register'> <br>
+
+
+		<br><br>
+		<b>10. HTML form tag내에 포함되어 있는 component들을 초기화해주는 Reset button component</b>
+		<br>
+		<input type='reset'>
+
+
+		<br><br>
+		<b>11. 다중 문장 line이 작성 가능한 textarea component</b>
+		<br>
+		<textarea rows="4" cols="15">This module cover Web application basics : how browser and Web</textarea>
+
+
+	</form>
+
+
+</body>
+</html>
