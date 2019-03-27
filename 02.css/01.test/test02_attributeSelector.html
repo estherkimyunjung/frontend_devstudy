@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+
+<head>
+  <meta charset="utf-8">
+	<title>HTML StyleSheet Study</title>
+ 
+<style>
+
+  a[title]{
+    font-size: 20px;
+    text-decoration: none;
+    background-repeat: no-repeat;
+    background-position: left;
+    padding-left: 80px;
+    display: inline-block;
+
+    /* background-image:  */
+
+  }
+  a[title~=EtNEWS] {
+    background-image: url("images/site_etnews.jpg");
+    /* list-style-image: url("images/site_haninews.jpg"); */
+  }
+
+  a[title|=HANKYOREH] {
+    background-image: url("images/site_haninews.jpg");
+  }
+
+  a[title$="Shinmun"] {
+    background-image: url("images/site_kyungnews.jpg");
+  }
+
+  a[title*=my] {
+    background-image: url("images/site_ohmynews.jpg");
+  }
+  
+  a[href^="https"]{
+    color:green;
+    background-image: url("images/site_google.jpg");
+    }
+  
+  a[target=_blank] {
+    background-image: url("images/site_youtube.jpg");
+  }
+
+</style>
+  
+</head>
+
+<body>
+  <h3>CSS3 Attribute Selector Study</h3>
+  
+  <br><hr><br>
+
+  <a title="EtNEWS" href="http://www.etnews.com">EtNEWS</a><br>
+  <a title="HANKYOREH-News" href="http://www.hani.co.kr/">HANKYOREH News</a><br>
+  <a title="The Kyunghyang Shinmun" href="http://www.khan.co.kr">The Kyunghyang Shinmun</a><br>
+  <a title="OhmyNews" href="http://www.ohmynews.com">OhmyNews</a><br>
+  <a title="Google" href="https://www.google.com">Google</a><br>
+  <a title="Youtube" href="http://www.youtube.com/" target="_blank">Youtube</a><br>
+</body>
+
+</html>
