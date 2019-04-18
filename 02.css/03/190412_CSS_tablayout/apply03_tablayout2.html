@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>이미지없이 만드는 탭레이아웃</title>
+<style>
+	body{ background:#fff;}
+	section {
+		position:relative; 
+		width:500px;  
+		display:box; 
+		display:-webkit-box; 
+		-webkit-box-orient:horizental; 
+		box-orient:horizental; 
+	}
+	input{
+		width:100px;
+		display: none; /* input elements를 보이지 않게 한다*/
+	}
+	label {
+		position:relative;
+		display:block; 
+		width:100px; 
+		height:0; /* contents의 height를 초기화 한다*/
+		line-height:32px; /* label의 글의 줄 높이를 32px*/
+		border-right:30px solid white; /* 기본 라벨의 border에 오른 쪽을 추가 한다 생각하면 된다. label의 오른쪽 border 두께30px 밖의 선은 solid
+		그리고 흰색 - background 와 비슷하다고 볼수 있지만 속성을 한번에 width style color로 쓸수 있다*/
+		border-bottom:30px solid #a4dc6c; 
+		text-align:center; /* 글자 정렬을 가운데로 */
+		color:#fff; /* label색지정*/
+		font-size:15px; /* label의 글자 크기 */
+		font-weight:bold; /* Font style은 bold*/
+		text-shadow: rgba(10, 10, 10, 0.5) 0px 0px 1px; /*글자에 그림자를 넣는 효과 멀티 쉐도우를 넣으려고 반복해서 쓸수도 있다. 그런데 순서가 상관이 없나?
+		p { text-shadow: 0px 2px 2px rgba(255, 255, 255, 0.4); }  p { text-shadow: 1px 1px 1px #000, 3px 3px 5px blue; }*/
+		border-radius:5px 0 0 0px; /* 왼쪽 위 라벨을 둥글게 radius로 조절*/
+		text-decoration:none; /* text의 선이 없도록만들어줌*/
+		padding-left:5px; /* label의 padding을 왼쪽에 넣어줘서 오른쪽으로 이동하게 만듬*/
+		font-family:Arial, Helvetica, sans-serif; /*글꼴형식 지정*/
+		cursor: pointer; 
+		z-index:2;
+	}
+</style>
+</head>
+
+<body>
+  <section>	
+    <input id="select1" name="tabmenu" type="radio" >
+    <label for="select1"  >Story</label>
+    <input id="select2" name="tabmenu" type="radio" >
+    <label for="select2" >Happy life</label>
+    <input id="select3" name="tabmenu" type="radio" >
+    <label for="select3">Dream</label>
+  </section>
+
+</body>
+</html>
