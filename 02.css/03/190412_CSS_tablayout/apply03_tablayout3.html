@@ -1,0 +1,90 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>이미지없이만드는 탭레이아웃</title>
+<style>
+	body{ background:#fff;}
+	section {
+		position:relative; 
+		width:500px;  
+		display:box; 
+		display:-webkit-box; 
+		-webkit-box-orient:horizental; 
+		box-orient:horizental; 
+	}
+	input{
+		width:100px;
+		display: none;
+	}
+	label {
+		position:relative;
+		display:block; 
+		width:100px; 
+		height:0; 
+		line-height:32px; 
+		border-right:30px solid white; 
+		border-bottom:30px solid #a4dc6c; 
+		text-align:center; 
+		color:#fff; 
+		font-size:15px; 
+		font-weight:bold; 
+		text-shadow: rgba(10, 10, 10, 0.5) 0px 0px 1px;
+		border-radius:5px 0 0 0px; 
+		text-decoration:none; 
+		padding-left:5px; 
+		font-family:Arial, Helvetica, sans-serif; 
+		cursor: pointer;
+		z-index:2;
+	}
+	p .title{
+		position:relative; /*label의 포지션의 마지막 기록에 의해서 위치가 적용된다*/
+		display:block; /*각 p tag의 title class 마다 줄바꿈이 이뤄짐*/
+		font-size:22px; /*글자 싸이즈를 적용*/
+		height:30px; /*글자 높이를 결정*/
+		font-weight:bold; /*글자 스타일를 정의*/
+		color:#7adcb8; /*글자색 지정*/
+		font-family:Arial, Helvetica, sans-serif; /*글자꼴 지정*/
+		margin-bottom:10px; /*각 p tag의 title class 마다 아래쪽 마진을 10px로 넣어 줘서 간격을 넓혀 답답합을 없애 준다*/
+		text-shadow: rgba(255, 255, 255, 0.9) 1px 1px 1px;/*글꼴에 색과 사이즈를 정의했지만 적용이 된것을 볼수 없다...? 우선순위에 의해서 적용이 안된건가?*/
+		border-bottom:1px dashed #7adcb8;/*li마다 border아래쪽의 선을 1px의 두께로 dashed로 설정*/
+	}
+	p{
+		font-size:12px; /*p tag안에 있는 내용의 글꼴 사이즈를 12px로 설정*/
+		display:box; /*display:-webkit-box; 
+		-webkit-box-orient:horizental;상속이 일어나서 적용이 비활성화 되어 있다...*/
+		line-height:20px; /*p tag의 contects의 높이를 지정*/
+		color:#666666; /*p tag의 elements의 색 지정 그런데 적용이 되어 보이지 않음...*/
+	}
+</style>
+</head>
+
+<body>
+  <section>	
+    <input id="select1" name="tabmenu" type="radio" >
+    <label for="select1"  >Story</label>
+    <input id="select2" name="tabmenu" type="radio" >
+    <label for="select2" >Happy life</label>
+    <input id="select3" name="tabmenu" type="radio" >
+    <label for="select3">Dream</label>
+    <ul class="layout_mask">
+        <li>
+            <p><span class="title">STORY</span>
+                STORY...
+            </p>
+         </li>
+         <li>
+           <p><span class="title">Happy life</span>
+                  Happy life...
+           </p>
+         </li>
+         <li>
+            <p><span class="title">Dream</span>
+                Dream...
+            </p>
+         </li>
+    </ul>
+  </section>
+
+</body>
+</html>
