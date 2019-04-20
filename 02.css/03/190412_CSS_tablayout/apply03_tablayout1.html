@@ -8,8 +8,7 @@
 	section {				/* section tag안의 모든 label과 radio button의 */
 		position:relative;	/* position을 원래 있던 위치를 기준으로 좌표를 지정해주는 방식을 채택 */
 		width:500px;  /* section tag의 전체content너비를 500px */
-		display:box;	/* section tag안의 content를 box로 묶어서 element배치를 자유롭게 이동
-		할수 있는 grouping을 한다. float는 좌우만 정렬되는데 보다 좀더 다양하게 사용 */
+		display:box;	/* section tag안의 content를 box로 묶어서 element배치를 자유롭게 이동 할수 있는 grouping을 한다. float는 좌우만 정렬되는데 보다 좀더 다양하게 사용 */
 		display:-webkit-box; /*dox의 아래 elements를 webkit - box 묶어준다 */
 		-webkit-box-orient:horizental; /*dox의 아래 elements를 수평으로 배치 */
 		box-orient:horizental; /* box를 수평 방향으로 배치 그런데 여기서는 왜 꼭 필요한지 잘 모름....*/
@@ -29,13 +28,12 @@
 
 <body>
   <section>	
-    <input id="select1" name="tabmenu" type="radio" > /* id가 select1인 radio button type 인 input생성 서버로 전달되는 이름은값은 tabmenu  */
-    <label for="select1" >Story</label> /* input tag의 id가 select1인곳에 label을 만들어주고 input button을 직접 누르지 않고 label을 클릭하면 input tag가 활성화가 될수 있게 한다. */
+    <input id="select1" name="tabmenu" type="radio" > <!-- id가 select1인 radio button type 인 input생성 서버로 전달되는 이름은값은 tabmenu -->
+    <label for="select1" >Story</label> <!--input tag의 id가 select1인곳에 label을 만들어주고 input button을 직접 누르지 않고 label을 클릭하면 input tag가 활성화가 될수 있게 한다.-->
     <input id="select2" name="tabmenu" type="radio" >
     <label for="select2" >Happy life</label>
     <input id="select3" name="tabmenu" type="radio" >
     <label for="select3">Dream</label>
   </section>
-
 </body>
 </html>
