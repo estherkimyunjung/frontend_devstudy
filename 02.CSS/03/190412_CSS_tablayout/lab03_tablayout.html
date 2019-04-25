@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS Layout Study</title>
+    <style>
+
+        
+    .item1 {grid-area: header;}
+    .item2 {grid-area: menu;}
+    .item3 {grid-area: main;}
+    .item4 {grid-area: sidebar;}
+    .item5 {grid-area: footer;}
+    .layout_mask3 { 
+        display: grid;
+        grid-template-areas: 'left header header header header right''left menu menu menu sidebar right''left main main main sidebar right''left footer footer footer footer right';
+        grid-gap: 5px;
+        background-color: rgb(241, 140, 24);
+        margin: 50px;
+    }
+    .layout_mask3>div {
+        background-color: rgb(202, 61, 245);
+        text-align: center;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 20px;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        padding: 10px;
+    }
+    .grid {
+        display:inline;
+        padding-left: 20px;
+    }
+    .item1 {
+        margin-top: 10px;
+    }
+    .item5 {
+        margin-bottom: 10px;
+        color:blue;
+    }
+    .item2 + .item3 {
+        line-height: 200px;
+    }
+
+    </style>
+
+</head>
+<body>
+    <content class="layout">
+        <div class="layout_mask1">
+            <h3 class="float">Float Layout</h3>
+            <ul>
+                <li>apple</li>
+                <li>pineapple</li>
+                <li>strawberry</li>
+                <li>grape</li>
+                <li>orange</li>
+            </ul>
+        </div>
+        <h3 class="position">Position Layout</h3>
+        <div class="layout_mask2">
+            <input id="season1" type="radio" name="season" value="spring"> 
+            <label for="season1">spring</label>
+            <input id="season2" type="radio" name="season" value="summer">
+            <label for="season2">summer</label>
+            <input id="season3" type="radio" name="season" value="fall">
+            <label for="season3">fall</label>
+            <input id="season4" type="radio" name="season" value="winter">
+            <label for="season4">winter</label>
+            
+        </div>
+        <div class="layout_mask3">
+            <h3 class="grid">Grid Layout</h3>
+            <div class="item1">Header</div>
+            <div class="item2">Menu</div>
+            <div class="item3">Main</div>
+            <div class="item4">SideBar</div>
+            <div class="item5">Footer</div>
+        </div>
+    </content>
+</body>
+</html>
+
