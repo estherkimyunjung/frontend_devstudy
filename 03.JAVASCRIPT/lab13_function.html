@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        #mySidenav a {
+            position: absolute;
+            left: -80px;
+            transition: 0.3s;
+            padding: 15px;
+            width: 100px;
+            text-decoration: none;
+            font-size: 20px;
+            color: white;
+            border-radius: 0 5px 5px 0;
+        }
+
+        #mySidenav a:hover {
+            left: 0;
+        }
+
+        #about {
+            top: 20px;
+            background-color: #4CAF50;
+        }
+
+        #blog {
+            top: 80px;
+            background-color: #2196F3;
+        }
+
+        #projects {
+            top: 140px;
+            background-color: #f44336;
+        }
+
+        #contact {
+            top: 200px;
+            background-color: #555
+        }
+    </style>
+</head>
+
+<body>
+    <!-- step01 : href 속성에 즉시 실행 함수로 각각의 사이트 적용해 보기 -->
+    <div id="mySidenav" class="sidenav">
+        <a href="#" id="about">About</a> <!-- google-->
+        <a href="#" id="blog">Blog</a> <!-- naver -->
+        <a href="#" id="projects">Projects</a> <!-- yahoo -->
+        <a href="#" id="contact">Contact</a> <!-- encore -->
+    </div>
+    <script>
+        (function () { 
+            document.getElementsByTagName("a")[0].href = "http://google.com"; // I can change a,h tag's attribute and select by a,h tag's attribute's index
+            document.getElementsByTagName("a")[1].href = "http://naver.net";
+            document.getElementsByTagName("a")[2].href = "http://yahoo.com";
+            document.getElementsByTagName("a")[3].href = "https://playdata.io/";
+        }());
+    </script>        
+    
+    <div style="margin-left:80px;">
+        <h2>Hoverable Sidenav Buttons</h2>
+        <p>Hover over the buttons in the left side navigation to open them.</p>
+
+    <!-- step02 :
+        각각의 input tag 클릭시에 value 속성값이 div tag에 출력되게 하기
+        개발 설계
+        방법 1: getElementById로 해당 tag를 검색(찾아서)innerHTML 속성으로 div tag에 값 출력
+        방법 2: input tag에 직접 입력값을 받아서 input tag 클릭시에 value 속성값이 div tag에 출력되게 하기
+                getElementById로 해당 tag를 검색(찾아서)innerHTML 속성으로 div tag에 값 출력
+    -->    
+        <input type="text" id="name" value="step02_1" onclick="veiwdata(this.value)">
+        <input type="text" id="name" onclick="veiwdata(this.value)" placeholder="step02_2">
+        <div id="here"></div>
+    <script>
+        function veiwdata(v) {
+            document.getElementById("here").innerText=v;
+            document.getElementById("name").value=" ";
+        }
+    </script>
+    <!-- step03 : step02의 추가 학습
+        각각의 input tag 클릭시에 value 속성값이 div tag에 출력되게 하기
+        개발 설계
+        방법 1 : getElementById로 해당 tag를 검색(찾아서)innerHTML 속성으로 div tag에 값 출력
+        방법 2 : value 속성값을 호출 하는 함수의 parameter 값으로 반영
+            - 발생 가능한 문제
+                혹여 value속성값이 가변적이라면? 즉 동적 데이터는 부적합한 구조
+                <input type="text" id="name" value="유재석" onclick="viewData('유재석')">
+        방법 3 : this 키워드
+    -->
+        <input type="text" id="name"  onclick="viewDataValue(this.value)"><br>
+        <input type="text" id="age" value="20" onclick="viewData(20)"><br>
+        <!-- <input type="text" id="job" value="연예인" onclick="viewDataThis(this)"><br> -->
+        <input type="text" id="job" onblur="viewDataThis(this)"><br>
+    
+        <br><hr><br>
+        <div id="viewMsg"></div>
+    </div>
+
+
+    <script>
+        //step03 - this 키워드의 필요성 및 사용법
+        /* document.getElementById("age").value 코드 처럼 특정 id값으로
+        해당 tag를 검색하는 로직의 코드는 불필요
+        value 속성값을 직접 받기 때문
+        +
+        input tag 자체에 this 키워드로 해당 tag의 모든 속성 사용 가능
+        장점 : tag의 구분도 명확해지고 코드도 간결해지고 보유한 다양한 속성 다 사용 가능
+        */
+        function viewDataThis(v){
+            document.getElementById("viewMsg").innerText = v.value;
+        }
+
+        //step02 - client가 입력하는 동적 데이터의 value 속성값 활용
+        /* document.getElementById("age").value 코드 처럼 특정 id값으로
+        해당 tag를 검색하는 로직의 코드는 불필요
+        value 속성값을 직접 받기 때문
+        */
+        function viewDataValue(v){
+            document.getElementById("viewMsg").innerText = v;
+        }
+
+        //step01 - 고정 데이터 처리 하는 단순 연습
+        function viewData(){
+            console.log(document.getElementById("age").value);
+        }
+
+        // (function () { }());
+
+        /* 개발 방법 단계 고려
+        경우의 수 1. () 활용해서 tag를 parameter 로 넘길것인지?
+        경우의 수 2. () parameter를 blank햇 {} 내부에서 tag를 찾아서 처리 할 것인지?
+ 
+        해당 tag는 알고 있는 상태에서 href 변수값 수정
+        href 속성값을 내가 read 할수 있는지? read가 가능하다면 udpate를 시도
+    
+        innerHTML, innerText, value 
+            innerHTML : div/p - 해당 tag들의 하위에 html tag 적용
+            innText : div/p - "         " 모든 데이터를 문자열로 적용
+            value : input tag의 값을 표현하는 속성
+        
+        a tag의 href 속성
+    
+        */
+       
+    </script>
+
+</body>
+
+</html>
