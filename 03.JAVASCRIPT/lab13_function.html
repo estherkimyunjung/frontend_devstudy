@@ -70,14 +70,17 @@
         방법 2: input tag에 직접 입력값을 받아서 input tag 클릭시에 value 속성값이 div tag에 출력되게 하기
                 getElementById로 해당 tag를 검색(찾아서)innerHTML 속성으로 div tag에 값 출력
     -->    
-        <input type="text" id="name1" value="step02_1" onclick="veiwdata(this.value)">
-        <input type="text" id="name2" value="" onclick="veiwdata(this.value)" placeholder="step02_2">
+        <input type="text" id="name1" value="step02_1" onclick="veiwdata(this,this.value)">
+        <input type="text" id="name2" value="" onclick="veiwdata(this,this.value)" placeholder="step02_2">
         <div id="here"></div>
     <script>
-        function veiwdata(v) {
+        function veiwdata(tag,v) {
             document.getElementById("here").innerText=v;
-            document.getElementById("name1").value="";
-            document.getElementById("name2").value="";
+            if(tag.getAttribute("id") == "name1") {
+                tag.value = "step02_1";
+            } else if(tag.getAttribute("id") == "name2") {
+                tag.value = "";
+            }
         }
     </script>
     <!-- step03 : step02의 추가 학습
