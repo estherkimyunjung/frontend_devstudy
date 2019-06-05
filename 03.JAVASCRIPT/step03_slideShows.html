@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    * {
+      box-sizing: border-box
+    }
+
+    .mySlides1,
+    .mySlides2 {
+      display: none
+    }
+
+    img {
+      vertical-align: middle;
+    }
+
+    /* Slideshow container */
+    .slideshow-container {
+      max-width: 1000px;
+      position: relative;
+      margin: auto;
+    }
+
+    /* Next & previous buttons */
+    .prev,
+    .next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      width: auto;
+      padding: 16px;
+      margin-top: -22px;
+      color: white;
+      font-weight: bold;
+      font-size: 18px;
+      transition: 0.6s ease;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+    }
+
+    /* Position the "next button" to the right */
+    .next {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+    }
+
+    /* On hover, add a grey background color */
+    .prev:hover,
+    .next:hover {
+      background-color: #f1f1f1;
+      color: black;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h2 style="text-align:center">Multiple Slideshows</h2>
+
+  <div class="slideshow-container">
+    <p>Slideshow 1:</p>
+    <div class="mySlides1"><img src="images/img_nature_wide.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides1"><img src="images/img_snow_wide.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides1"><img src="images/img_mountains_wide.jpg" style="width:100%">
+    </div>
+
+    <a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
+  </div>
+
+  <script>
+    var slideIndex = [1, 1];
+    showSlides(1, 0);
+
+    
+    function plusSlides(moveNo, currentNo) { 
+      console.log("-- ", moveNo, '-', currentNo);
+      showSlides(slideIndex[currentNo] += moveNo, currentNo);
+    }
+
+    function showSlides(moveNo, currentNo) {
+      console.log("showSlides ", moveNo, currentNo);
+      var i;
+      var x = document.getElementsByClassName("mySlides1");
+
+      if (moveNo < 1) {  
+        slideIndex[currentNo] = x.length;
+      }
+
+      if (moveNo > x.length) {  
+        slideIndex[currentNo] = 1;
+      }
+
+
+
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+      }
+
+      x[slideIndex[currentNo] - 1].style.display = "block";
+
+      console.log(currentNo);
+      console.log(x[slideIndex[currentNo] - 1].firstChild);
+    }
+  </script>
+
+</body>
+
+</html>
