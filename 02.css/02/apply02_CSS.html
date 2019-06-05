@@ -3,9 +3,16 @@
 <head>
     <title>HTML5 기본 프로젝트</title>
     <style>
-        .master-title{
-            margin-left: 100px;
-            margin-bottom: 50px;
+        body{
+            width: 960px;
+            margin: 0 auto;
+            background:rgb(230, 244, 245);
+        }
+        #page-wrapper{
+            background: white;
+            padding: 10px 20px;
+            border-radius: 10px;
+            box-shadow:0 2px 6px chartreuse;
         }
         nav {
             padding-top: 15px;
@@ -35,22 +42,19 @@
         }
         #main-section {
             margin-left: 25px;
-            
-            
         }
-        article:nth-child(2) {
-            border-top-style: groove;
+        .article-body {
+            border-bottom: solid;
         }
         #content {
             display: flex;
             flex-direction:row;
-
         }
         .aside-list{
             text-align: right;
         }
         .aside-list > h3 {
-            width: 300px;
+            width: 200px;
             margin-bottom: 0;
             font-size: 20px;
             text-align: center;
@@ -59,13 +63,13 @@
             text-decoration: none;
             color: black;
         }
-        .aside-list:nth-child(2) {
+        .aside-list li a {
             margin-top: 175px;
         }
-        ul:last-child{
+        /* ul:last-child{
              padding-left: 30px;
-        }           
-        footer{
+        }            */
+        /* footer{
             border-top-style: groove;
             position: fixed;
             left: 0;
@@ -73,12 +77,13 @@
             width: 100%;
             text-align: left;
             margin-left: 20px;
-        }
+        } */
         .input-search{
             border-radius:25px;
             padding: 10px; 
             width: 200px;
             height: 15px;  
+            outline: none;
         }
     </style>
 </head>

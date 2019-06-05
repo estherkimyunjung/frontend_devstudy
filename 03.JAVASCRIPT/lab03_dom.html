@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>html</title>
+</head>
+<body>
+    <div id="view1"></div>
+    <div id="view2"></div>
+    <button onclick="dataView()">클릭</button>
+
+
+    <script>
+        function dataView(){
+            var viewData = "<button>버튼보이기</button>"
+            document.getElementById("view1").innerHTML = viewData;
+            // document.getElementById("view2").innerText = viewData;
+        }
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title> JavaScript DOM Study</title>
+</head>
+<body>
+	<h2> Adding and Deleting Elements </h2>
+	<ul id="fruit"> Fruit List
+		
+		<li id="apple"> Apple </li>
+		<li class="pineapple" name = "pineapple" value="pineapple">Pineapple</li>
+		<li class="friut">strawberries</li>
+		<li class="friut">grape</li>
+		<li class="friut">pomegranate</li>
+		<button type="button" onclick="myFunction()">change</button>
+	</ul>
+
+	<script>
+		
+		document.getElementById("apple").innerHTML = "Here is Apple"; // change text by id 
+		document.getElementsByClassName("pineapple")[0].innerHTML = "change name";// change text by class but must call by class index number
+		document.getElementsByClassName("friut").innerHTML = "Here is ClassName Apple"; // change text by function when click the button
+		function myFunction() {
+			var x = document.getElementsByClassName("friut");
+			  x[1].innerHTML = " ";
+		}
+		document.re
+	</script>
+
+</body>
+</html>

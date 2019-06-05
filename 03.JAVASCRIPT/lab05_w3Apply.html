@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative;
+}
+
+img.avatar {
+  width: 40%;
+  border-radius: 50%;
+}
+
+.container {
+  padding: 16px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)} 
+  to {-webkit-transform: scale(1)}
+}
+  
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+}
+</style>
+</head>
+<body>
+
+<h2>Modal Login Form</h2>
+
+<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
+
+<!-- <button onclick="printInBody('dataView1').style.display='block'" style="width:auto;">Login</button> -->
+
+<div id="dataView1" onclick="printInBody('dataView1')">testPrintInBody</div>
+
+<div id="id01" class="modal">
+  
+  <form class="modal-content animate" action="#">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+        <!-- <img src="img_avatar2.png" alt="Avatar" class="avatar"> -->
+
+    </div>
+
+    <div class="container">
+      <label for="uname"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="uname" id="uname" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
+
+      <!-- <button onclick="valueSave()">Login</button> -->
+      <button onclick="printInBody()">Login</button>
+
+        <script>
+            function printInBody(){
+            document.getElementById("dataView1").innerText = "Text print in a body";
+            }
+        </script>
+        
+        <!-- <script>
+            function valueSave(){
+                //alert(document.getElementById("uname").value);
+                document.getElementById("dataView").innerText = "test";
+            }
+        </script> -->
+
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+      </label>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+      <span class="psw">Forgot <a href="#">password?</a></span>
+    </div>
+  </form>
+</div>
+
+
+<!-- <script>
+// Get the modal
+var modal = document.getElementById('id01');
+
+1. onload
+ 브라우저의 html중 body tag가 다 실행되면 자동 호출되는 속성
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
+ window.onload = function(){
+     alert("run");
+ }
+</script> -->
+
+
+</body>
+</html>
+<!--
+1. 실습 내용
+    - w3schools에서 제공하는 template 사용해서 js로 동적으로 데이터 처리
+2. review
+    1. div tag
+        1. innerHTML
+        2. innerText
+        3. value속성 미존재
+3. 완성을 위한 개발단계
+    1. alert()함수로 순수 js 사용자 정의 함수가 제대로 호출되는지 사전에 확인
+    2. 사용자 정의 함수 개발후 호출 확인
+    3. div 위치를 제대로 설정했는지
+        =====
+    4. 일반 데이터로 div에 동적으로 출력 가능한지 확인
+    5. 사용자 정의 함수에 로직 완성
+        1. uname 이라는 id값의 데이터를 read
+            getElementById()
+            uname tag는 input 따라서 value 속성으로 read
+        2. div에 출력
+            text로 출력 따라서 innerText -->

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Frist Java Script EX</title>
+</head>
+<body>
+    input tag 두개를 <br>
+    <input type="text" id="message1" value = "data"><br>
+    <input type="text" id="message2"><br>
+
+    <button onclick="dataChange()"> CLICK </button> 
+    <script>
+        function dataChange(){
+            // var data = document.getElementById("message1").value;
+            // document.getElementById("message2").value = data;
+            document.getElementById("message2").value = document.getElementById("message1").value;
+            document.getElementById("message1").value = "";
+        }
+    </script>
+    
+</body>
+</html>

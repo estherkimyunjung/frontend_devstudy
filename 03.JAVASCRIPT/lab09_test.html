@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+    name <input type="text" id = "name" value=""> <br>
+    age <input type="text" id = "age" value=""> <br>
+    job <input type="text" id = "job" value=""> <br>
+    <button class='data view' onclick="dataV()">Data view</button>
+    <button class='data reset' onclick="dataR()">Data reset</button>
+
+    <script>
+        var person = {
+            name : "esther",
+            age : 30,
+            job : "it" 
+        }
+        function dataV(){
+ //         alert(person.name);
+            document.getElementById('name').value = person.name;
+            document.getElementById('age').value = person.age;
+            document.getElementById('job').value = person.job;
+        }
+    
+        function dataR(){
+            location.reload();
+        }
+
+    </script>
+</body>
+</html>

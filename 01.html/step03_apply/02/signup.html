@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sign Up</title>
+</head>
+<body>
+    <h1>회원 가입</h1>
+    <form action="">
+        <fieldset>
+            <legend>Personal Information</legend>
+            <label for="name">Name:</label>
+            <input type="text" name="name" id="name" value="NAME" pattern="[a-zA-Z]{2,}"><br>
+            <label for="id">ID:</label>
+            <input type="text" name="id" id="id" value="ID" autofocus><br>
+            <label for="tel">Telephone:</label>
+            <input type="text" name="tel" id="tel" value="TELEPHONE" required><br>
+            Web Page:
+            <input type="text" name="url" value="WEB PAGE"><br>
+            Email:
+            <input type="email" name="email" value="EMAIL"><br>
+            Password;
+            <input type="password" name="pw" value="PASSWORD"><br>
+            Color:
+            <input type="color" name="color" value="COLOR"><br>
+        </fieldset>
+        <fieldset>
+            <legend>Addtional Information</legend>
+            <p>외국어 능력
+                <input type="checkbox" name="lang1" value="영어"> 영어
+                <input type="checkbox" name="lang2" value="중국어">중국어
+                <input type="checkbox" name="lang3" value="일본어">일본어</p>
+            <p>성별
+            <input type="radio" name="gender" value="male">남자
+            <input type="radio" name="gender" value="female">여자</p>
+        </fieldset>
+        <fieldset>
+            <legend>기타 정보</legend>
+            <p>
+                생일
+                <input type="date" name="bday"> 
+                자녀수<input type="number" name="number">
+                통화가능시간<input type="time" name="time">
+                행복지수<input type="range" name="point" min="0" max="10">
+            </p>
+        </fieldset>
+    </form>
+    <a href="report03_htmlLayout.html">Main page로 되돌아가기</a>
+</body>
+</html>

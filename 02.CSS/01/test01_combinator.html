@@ -1,0 +1,90 @@
+﻿<!DOCTYPE html>
+
+<head>
+	<meta charset="utf-8">
+	<title>HTML5 StyleSheet Study</title>
+	<style>
+		body{
+			font-size: 20px;
+		}
+		#main{
+			border-style: solid;
+		}
+		#main > p {
+			background-color: rgb(127, 255, 170);
+			color: white;
+		}
+		#main div {
+			background-color: yellow;
+			border-style: dashed;
+			border-color: red;
+		}
+		
+		.attribute {
+			color: green;
+				}
+
+		.attribute ~ li{
+			font-style: 10px;
+			font-style: italic;
+			color: red;
+		}
+
+		.class, .id {
+			font-size: 25px;
+			font-weight: bold;
+		}	
+
+		table, td {
+			border: 2px solid black;
+		}
+
+
+	</style>
+	
+	
+</head>
+
+<body>
+	<h3>CSS3 Combinator Excercise</h3>
+
+	<br><hr><br>
+
+	<div id="main">
+		Id Attribute ( div attribute of id is main)
+		<p>Selector Study</p>
+		
+		<div>first div attribute of main id</div>
+
+		<ol>
+			<li class="class">Class Selector</li>
+			<li class="id">ID Selector</li>
+			<li class="attribute">Attribute Selector</li>
+			<li class="pclass">Pseudo-class Selector</li>
+			<li class="pelement">Pseudo-elements Selector</li>
+		</ol>
+		
+		<table>
+			<tr>
+				<td>HTML</td>
+				<td>HTML is the standard markup language for creating Web pages.</td>
+			</tr>
+			<tr>
+				<td>CSS</td>
+				<td>CSS is a language that describes the style of an HTML document.</td>
+			</tr>
+		</table>
+
+		<div>
+			second div attribute of main id
+			<p>Selector Ex3</p>
+			<p>Selector Ex4</p>
+		</div>
+		
+		<div>
+			<p>A combinator is something that explains the relationship between the selectors. It can olny use by specified element in CSS</p>
+		</div>
+		
+	</div>
+</body>
+</html>

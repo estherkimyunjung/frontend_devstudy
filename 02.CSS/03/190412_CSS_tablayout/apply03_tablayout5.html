@@ -1,0 +1,158 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>이미지없이만드는 탭레이아웃</title>
+<style>
+	section {
+		position: relative;
+		width: 500px;
+		margin: 20px auto;
+		display: box;
+		display: -webkit-box;
+		-webkit-box-orient: horizental;
+		box-orient: horizental;
+	}
+
+	input {
+		width: 100px;
+		display: none;
+	}
+
+	input.menu1:checked ~ label.btn1, input.menu2:checked ~ label.btn2, input.menu3:checked ~ label.btn3 {
+		border-bottom: 30px solid #7adcb8;
+		color: #3ca57e;
+		text-shadow: rgba(255, 255, 255, 0.8) 0px 1px 1px;
+	}
+
+	label {
+		position: relative;
+		display: block;
+		width: 100px;
+		height: 0;
+		line-height: 32px;
+		border-right: 30px solid transparent;
+		border-bottom: 30px solid #a4dc6c;
+		text-align: center;
+		color: #fff;
+		font-size: 15px;
+		font-weight: bold;
+		text-shadow: rgba(10, 10, 10, 0.5) 0px 0px 1px;
+		border-radius: 5px 0 0 0px;
+		text-decoration: none;
+		padding-left: 5px;
+		font-family: Arial, Helvetica, sans-serif;
+		cursor: pointer;
+		z-index: 2;
+	}
+
+	ul {
+		position: relative;
+		margin: 30px auto;
+		width: 500px;
+		height: 300px;
+		padding: 30px;
+		-webkit-box-sizing: border-box;
+	}
+
+	ul.layout_mask {
+		position: absolute;
+		width: 500px;
+		left: 0;
+		height: 300px;
+		overflow: hidden;
+	}
+
+	ul.layout_mask li {
+		position: absolute;
+		top: 0px;
+		left: 600px;
+		padding: 20px 30px 30px 30px;
+		list-style: none;
+	}
+
+	p .title {
+		position: relative;
+		display: block;
+		font-size: 22px;
+		height: 30px;
+		font-weight: bold;
+		color: #7adcb8;
+		font-family: Arial, Helvetica, sans-serif;
+		margin-bottom: 10px;
+		text-shadow: rgba(255, 255, 255, 0.9) 1px 1px 1px;
+		border-bottom: 1px dashed #7adcb8;
+	}
+
+	p {
+		font-size: 12px;
+		display: box;
+		line-height: 20px;
+		color: #666666;
+	}
+
+		input.menu1:checked ~ .layout_mask li:nth-child(1), input.menu2:checked ~ .layout_mask li:nth-child(2), input.menu3:checked ~ .layout_mask li:nth-child(3){
+	
+		left: 0px;
+		z-index: 10;
+	}
+
+
+	.effect {
+		position: relative;
+		width: 500px;
+		height: 300px;
+		margin: -20px auto;
+		-webkit-box-sizing: border-box;
+		background: #fff;
+		border-radius: 0 10px 10px 10px;
+		-webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3) /*바깥쪽 그림자주기*/, 0 0 40px rgba(0, 0, 0, 0.1) inset; /*안쪽 그림자 주기*/
+		box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+	}
+
+	.effect:before, .effect:after {
+		content: "";
+		position: absolute;
+		z-index: -1;
+		-webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+		box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+		top: 70%;
+		bottom: 0;
+		left: 15px;
+		right: 15px;
+		border-radius: 100px/10px; /*밑에 좀더 진한 그림자 자연스럽게 둥글리기 */
+	}
+</style>
+</head>
+
+<body>
+  <section>	
+    <input id="select1" name="tabmenu" type="radio" class="menu1" checked="">
+    <label for="select1"  class="btn1">Story</label>
+    <input id="select2" name="tabmenu" type="radio" class="menu2">
+    <label for="select2" class="btn2">Happy life</label>
+    <input id="select3" name="tabmenu" type="radio" class="menu3">
+    <label for="select3" class="btn3">Dream</label>
+    
+   <ul class="layout_mask">
+        <li>
+            <p><span class="title">STORY</span>
+                STORY...
+            </p>
+         </li>
+         <li>
+           <p><span class="title">Happy life</span>
+                  Happy life...
+           </p>
+         </li>
+         <li>
+            <p><span class="title">Dream</span>
+                Dream...
+            </p>
+         </li>
+    </ul>
+  </section>
+ <div class="effect"></div>
+</body>
+</html>
+
