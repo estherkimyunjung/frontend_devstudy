@@ -1,0 +1,38 @@
+
+/* body - surrounding by div(content)*/
+#container {
+    width: 650px; /* entire width size*/
+    margin: 0 auto; /* center of width */
+    padding: 10px; /* padding space between content and border */
+}
+/* body - surrounding by div(content without image) */
+#check {
+    border: 1px solid #ccc; /* border size, type, color */
+}
+/* body - subject */
+h1 {
+    color: white; /* text color */
+    font-size: 1em; /* text size */
+    background: #222; /* background color */
+    margin: 0; /* margin space between subject and other elements */
+    padding: 10px; /* padding space between subject and border */
+    margin-bottom: 10px; /* margin space between subject bottom and bottom elements */
+}
+
+h2 {
+    color: #ff0000; /* text color */
+    font-size: 1.25em; /* text size */
+    text-align: center; /* text center arrange */
+    font-weight: bold; /* font style change to bold */
+}
+p {
+    font-size: 1em; /* text size */
+    line-height: 2em; /* line spacing */
+    text-align: center; /* text center arrange */
+}
+.accent {
+    color: blue; /* text color */
+}
+.smalltext {
+    font-size: 0.75em; /* text size */
+}
