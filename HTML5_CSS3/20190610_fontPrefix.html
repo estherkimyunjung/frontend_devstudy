@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>2019년 06월 11일 멘토링 교육준비</title>
+    <script src="prefixfree.min.js"></script>
+    <script>
+        /* prefix 사이트 : http://leaverou.github.io/prefixfree/ */
+    </script>
+    <style>
+
+        /* web font 참고 사이트 : https://wit.nts-corp.com/2017/02/13/4258 */
+
+        /* 웹 폰트 적용 사례 1 */
+        @import url('https://fonts.googleapis.com/css?family=Nanum+Gothic&display=swap');
+
+        /* 웹 폰트 적용 사례 2 */
+        @font-face{
+            font-family: 'trana'; /* 내가 적용하고자 하는 font의 이름을 지정 -> 내가 원하는 이름으로 변경 가능하다 */
+            src : local('trana'), /* 사용자 pc에 해당 font가 설치되어 있는지 확인 -> IE8 이하에서는 local()을 인식하지 못하고, 사용자 로컬에 잘못설치된 경우 원하는 화면 노출이
+            어렵기 때문에, local() 속성을 잘 사용하지 않는다 */
+                url('trana.eot') format('embedded-opentype'), /* 다운로드 할 웹 폰트의 주소, 크롬브라우저에서는 .eot 파일 미지원 */
+                url('trana.woff') format('woff'), /* format 속성을 사용하면 브라우저에서 지원 가능한 파일만 다운로드 */
+                url('trana.ttf') format('truetype');
+            /* ttf의 경우 파일 크기가 너무 크기 때문에 eot와 woff로 변환하여 사용한다. -> https://transfonter.org에서 가능 */
+        }
+
+        /* font size */
+        /* px단위를 주로 사용하나, px단위 사용시 폰트 크기 고정으로 인해 모바일 기기에서는 잘 보이지 않는 문제가 발생 -> em 혹은 rem 단위가 사용하기 좋음 (해당 글꼴의 대문자 M의 너비를 기준으로 크기 조절 */
+        /* px를 em 단위로 변환하기 어려울때 www.pxtoem.com 에서 변환하여 사용 가능 */
+
+        /* font : <font-style> <font-variant> <font-weight> <font-size/line-height> <font-family> | caption | icon | menu | message-box | small-caption | status-bar */
+
+        /* color, 컬러 추출기 다운로드 : http://colorcop.net/download/ */
+        
+        .shadowTest{
+            font-size: 10em;
+            color:black;
+            text-shadow: 0 0 4px #ccc, 0 -5px 4px #ff3, 2px -10px 6px #fd3, -2px -15px 11px #f80, 2px -19px 18px #f20; 
+        }
+
+    </style>
+</head>
+<body>
+    <h1 style="font-size: 12px; color: blue;">hello, world</h1>
+    <p class="shadowTest">Nice to meet you</p>
+</body>
+
+</html>

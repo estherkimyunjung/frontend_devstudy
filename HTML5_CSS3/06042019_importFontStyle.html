@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>css basic_Internal/external Style Sheet</title>
+        <!-- linked external style sheet -->
+        <link href="06042019_importFontStyle.css" rel="stylesheet" type="text/css">
+        
+        <!-- internal style applied
+        <style>
+            ul {
+                color: blue;
+                font-size: 20px;
+                list-style: square;
+            }
+        </style> 
+        -->
+        <style>
+        /* applied webfont*/
+        @import url("https://fonts.googleapis.com/css?family=Pacifico&display=swap");
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>grayscale photography</h1>  
+        </header>
+        <figure>
+            <img src="window.jpg" width="100%" alt="window">
+
+            <!-- Inline Style applied of  description of image. -->
+            <figcaption style="text-align: center">Grayscale photography of window</figcaption>
+        </figure>
+        <main>
+            <ul>
+                <li class="redtext">two clear drinkin <span id="greentext">glasses</span></li>
+                <li>documents</li>
+                <li>Window</li>
+            </ul>
+        </main>
+    </body>
+</html>

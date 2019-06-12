@@ -1,0 +1,48 @@
+
+/* 2nd,3rd,4th div tag start */
+.textBold {
+    font-weight: 700;
+    font-size: larger;
+} /* 2nd, 3rd div tag end */
+
+.step_twoUpdated>ul{
+    list-style-type: none;
+    line-height: 2;
+}
+.textColor {
+    color: #ad3000;
+} /* 4rd div tag end */
+
+/* 5th div tag */
+.step_three {
+    background-color: rgb(99, 59, 59);
+}
+/* 6th div tag */
+.step_threeUpdated {
+    text-align: center;
+    color: white;
+    text-shadow: 3px 2px 5px #000;
+}
+/* 7th(last) div tag start */
+.step_fourImage {
+    display: flex;
+    margin: 3em;
+}
+.step_four {
+    font-family: 'Courier New', monospace;
+    margin-left: 3em;
+}
+.step_four>h1 {
+    font-size: 17px;
+}
+.step_four>p {
+    font-size: 16px;
+    line-height: 25px;
+}
+.accent {
+    font-weight: bolder;
+    color: red;
+}
+.step_four>:nth-child(3) {
+    padding-top: 1em;
+} /* 7th(last) div tag end */

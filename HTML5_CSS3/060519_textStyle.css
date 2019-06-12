@@ -1,0 +1,38 @@
+/* content */
+#container {
+    width: 650px;
+    margin: 0 auto;
+    padding: 10px;
+}
+/* content without image */
+#check {
+    border: 1px solid #ccc;
+}
+/* subject */
+h1 {
+    color: white;
+    font-size: 1em;
+    background: #222;
+    margin: 0;
+    margin-bottom: 10px;
+}
+/* sub title */
+h2 {
+    color: #ff0000;
+    font-size: 1.25em;
+    text-align: center;
+}
+/* paragraph of sub title */
+p {
+    font-size: 1em;
+    line-height: 2em;
+    text-align: center;
+}
+/* marked of frist paragraph */
+.accent {
+    color: blue;
+}
+/* serive hours content*/
+.smalltext {
+    font-size: 0.75em;
+}

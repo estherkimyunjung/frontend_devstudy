@@ -1,0 +1,54 @@
+
+/* Reset Stylesheet */
+* { margin: 0; padding: 0; }
+body { font-family: none; }
+li { list-style: none; }
+a { text-decoration: none; }
+img { border: 0; }
+
+/* header */
+h1 {
+    margin: 20px;
+}
+
+/* main 
+    selector - tag, id, class, 
+    cascading order practice
+    - importance
+        user style sheet > !important > web-browser
+    - Specificity
+        inline > id > class > tag
+    font attribute practice
+*/
+ul {
+    color: blue;
+    font-size: 2em;
+    list-style: square;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.redtext {
+    color: red;
+    margin:1.5em;
+    padding: 20px;
+}
+#greentext {
+    color: green;
+}
+#greentext:hover {
+    color:purple;
+}
+li:nth-child(2) {
+    font-family: "Pacifico" !important; /*use !important attribute to change cascading order*/
+    font-size: 30px;
+    margin:1.5em;
+    padding: 20px;
+    list-style: circle;
+    display: inline;
+}
+li:nth-child(3) {
+    font-size: 1.25em;
+    font-variant: small-caps; /*font style change:lower casea to small-caps */
+    display: inline-flex;
+    font-weight:bolder;
+    text-shadow: -3px 3px 5px gray;
+}

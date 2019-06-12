@@ -1,0 +1,42 @@
+/* background-clip / gradient practice*/
+body {
+    background-color:violet;
+    line-height: 1.5;
+}
+/* subject */
+h1 {
+    font-size: 1.25em;
+    white-space: pre-wrap;
+}
+/* subject-keyword */
+.accent {
+    font-weight: bold;
+}
+
+/* table */
+table,tr,th {
+    border: .75em dashed gray;
+    margin: 1em;
+}
+th,td {
+    padding: 2em;
+}
+.border-box {
+    margin: .5em;
+    background: repeating-linear-gradient(yellow, yellow .5em,red .5em, red 1em);
+    background-clip: border-box;
+}
+.padding-box {
+    margin: .5em;
+    /* background: radial-gradient(shape size at position(hor,ver), start-color, ..., last-color);
+            https://www.w3schools.com/csSref/tryit.asp?filename=trycss3_gradient-radial_size
+    */
+    background: radial-gradient(circle at 15% 3%, white, blue);
+    background-clip: padding-box;
+}
+.content-box {
+    margin: .5em;
+    background-color: green;
+    background-clip: content-box;
+    
+}
