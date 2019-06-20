@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <p>데이터 1</p>
+    <p>데이터 2</p>
+    <div>
+        <p>데이터 3</p>
+
+    </div>
+    <script>
+        console.log(document.getElementsByTagName("p"));
+        console.log(document.getElementsByTagName("p")[0].nodeValue);
+        console.log(document.getElementsByTagName("p")[0].nodeName);
+        console.log(document.getElementsByTagName("p")[0].firstChild.nodeValue);
+        console.log(document.getElementsByTagName("p")[0].lastChild);
+        console.log(document.getElementsByTagName("p")[1].lastChild.nodeValue);
+        console.log(document.getElementsByTagName("p")[1].lastChild);
+
+    </script>
+</body>
+</html>
